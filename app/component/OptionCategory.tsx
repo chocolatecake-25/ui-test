@@ -40,7 +40,9 @@ const OptionCategory = ({ title, list }: OptionCategoryType) => {
         }`}
         onClick={() => {
           if (type == "nav") {
-            router.push(`/${value}`);
+            // To navigate:
+            // router.push(`/${value}`);
+            alert(`navigate to ${value} page`);
             return;
           }
           if (type == "switch") {

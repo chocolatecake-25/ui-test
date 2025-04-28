@@ -1,4 +1,3 @@
-import { Dispatch, SetStateAction } from "react";
 import { IconType } from "react-icons";
 import { CiUser } from "react-icons/ci";
 import { HiOutlineChat } from "react-icons/hi";
@@ -33,7 +32,9 @@ const NavBar = () => {
         className="flex-ca flex-col gap-[6px] cursor-pointer"
         onClick={() => {
           setNav(nav);
-          router.push(`/${nav}`);
+          // To navigate:
+          // router.push(`/${nav}`);
+          alert(`navigate to ${nav} page`);
         }}
       >
         <Icon

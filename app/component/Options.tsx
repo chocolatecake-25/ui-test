@@ -1,4 +1,3 @@
-import { Dispatch, SetStateAction } from "react";
 import OptionCategory from "./OptionCategory";
 import { IoMoonOutline } from "react-icons/io5";
 import { LuEarth, LuInfo, LuFileText } from "react-icons/lu";
@@ -11,7 +10,7 @@ const Options = () => {
   const setTheme = useStateStore((state) => state.updateTheme);
   const prefOptions = [
     {
-      label: "Dark Mood",
+      label: "Dark Mode",
       icon: IoMoonOutline,
       type: "switch",
       value: theme,

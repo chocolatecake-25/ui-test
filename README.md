@@ -21,6 +21,12 @@ To clone the repo:
 git clone https://github.com/chocolatecake-25/ui-test.git
 ```
 
+Head into the folder:
+
+```bash
+cd ui-test
+```
+
 To install dependencies:
 
 ```bash

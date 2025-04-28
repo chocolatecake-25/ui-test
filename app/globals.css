@@ -2,8 +2,22 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000;
+  --primary: rgba(223, 201, 253);
+  --secondary: rgba(245, 237, 254);
+  --tertiary: rgba(250, 246, 255);
+  --accent: rgba(149, 80, 250);
 }
+
+/* 
+body[data-theme="dark"] {
+  --background: #000;
+  --foreground: #ffffff;
+  --primary: rgba(24, 2, 54);
+  --secondary: rgba(10, 1, 19);
+  --tertiary: rgba(5, 0, 10);
+  --accent: rgba(72, 5, 173);
+} */
 
 @theme inline {
   --color-background: var(--background);
@@ -12,15 +26,135 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: sans-serif;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.flex-ca,
+.menu-option,
+.option-icon-container,
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prof-bg {
+  mask: radial-gradient(circle at 50% 90px, #0000 45px, #000 45px);
+  mask-composite: exclude;
+  background-color: var(--secondary);
+}
+
+.dark .prof-bg {
+  background-color: rgb(62, 7, 117);
+}
+
+.edit-btn:active {
+  transform: scale(1.1);
+}
+
+.category-title {
+  background-color: var(--primary);
+}
+
+.dark .category-title {
+  background-color: rgba(24, 2, 54);
+}
+
+.option-container {
+  background-color: var(--tertiary);
+}
+
+.dark .option-container {
+  background-color: rgba(5, 0, 10);
+}
+
+.menu-option {
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.menu-option:active {
+  background-color: rgb(240, 232, 249);
+}
+
+.dark .menu-option:active {
+  background-color: rgb(23, 0, 46);
+}
+
+.option-title {
+  color: rgba(75, 74, 77);
+}
+
+.dark .option-title {
+  color: rgb(168, 166, 173);
+}
+
+.option-icon-container {
+  background-color: rgba(235, 221, 253);
+  height: 44px;
+  width: 44px;
+  border-radius: 100%;
+}
+
+.dark .option-icon-container {
+  background-color: rgb(16, 2, 34);
+}
+
+.switch {
+  position: relative;
+  background-color: rgb(217, 217, 217);
+  width: 36px;
+  height: 22px;
+  border-radius: 2rem;
+}
+
+.switch-on {
+  background-color: var(--primary);
+}
+
+.dark .switch-on {
+  background-color: rgba(24, 2, 54);
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.on {
+  left: auto;
+  right: 2px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.navbar {
+  background-color: white;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  padding: 13px 22px;
+  justify-content: space-between;
+}
+
+.dark .navbar {
+  background-color: black;
 }

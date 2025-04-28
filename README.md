@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Project structure
+## _Project Structure_
 
 ```
 ├── app
@@ -12,6 +12,8 @@ Project structure
     └── page.tsx : code for the main page of the task
 └── the rests: configurations of files
 ```
+
+## _How to run from command line._
 
 To clone the repo:
 
